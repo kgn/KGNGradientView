@@ -8,10 +8,19 @@
 
 #import "KGNGradientView.h"
 
+@implementation KGNGradient
+@end
+
 @implementation KGNGradientView
 
 + (Class)layerClass{
     return [CAGradientLayer class];
+}
+
++ (instancetype)viewWithGradient:(KGNGradient *)gradient{
+    KGNGradientView *view = [KGNGradientView new];
+    [view setGradient:gradient];
+    return view;
 }
 
 - (instancetype)init{
@@ -48,6 +57,11 @@
         CAGradientLayer *layer = (CAGradientLayer *)self.layer;
         layer.colors = @[(id)[self.topColor CGColor], (id)[self.bottomColor CGColor]];
     }
+}
+
+- (void)setGradient:(KGNGradient *)gradient{
+    self.topColor = gradient.topColor;
+    self.bottomColor = gradient.bottomColor;
 }
 
 @end
