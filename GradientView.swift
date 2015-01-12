@@ -50,8 +50,7 @@ class GradientView: UIView {
         let layer = self.layer as CAGradientLayer
         if let topColor = self.topColor {
             if let bottomColor = self.bottomColor {
-                let colors: Array <AnyObject> = [topColor.CGColor, bottomColor.CGColor]
-                layer.colors = colors
+                layer.colors = [topColor.CGColor, bottomColor.CGColor]
             }
         }
     }
