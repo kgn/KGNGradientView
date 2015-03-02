@@ -39,13 +39,13 @@ class RadialGradientView: UIView {
 
     var topColor: UIColor? {
         didSet {
-            let layer = self.layer as! RadialGradientLayer
+            let layer = self.layer as RadialGradientLayer
             layer.topColor = topColor
         }
     }
     var bottomColor: UIColor? {
         didSet {
-            let layer = self.layer as! RadialGradientLayer
+            let layer = self.layer as RadialGradientLayer
             layer.bottomColor = bottomColor
         }
     }
