@@ -25,8 +25,8 @@ class GradientView: UIView {
         return CAGradientLayer.self
     }
 
-    override init() {
-        super.init()
+    init() {
+        super.init(frame: CGRectZero) // TODO: is this the best work around?
         self.setup()
     }
 
@@ -41,13 +41,13 @@ class GradientView: UIView {
     }
 
     private func setup() {
-        let layer = self.layer as CAGradientLayer
+        let layer = self.layer as! CAGradientLayer
         layer.startPoint = CGPointMake(0.5, 0)
         layer.endPoint = CGPointMake(0.5, 1)
     }
 
     private func setColors() {
-        let layer = self.layer as CAGradientLayer
+        let layer = self.layer as! CAGradientLayer
         if let topColor = self.topColor {
             if let bottomColor = self.bottomColor {
                 layer.colors = [topColor.CGColor, bottomColor.CGColor]
