@@ -21,21 +21,24 @@ class RadialGradientLayer: CALayer {
         }
     }
 
-    override func drawInContext(context: CGContext!) {
-        if let topColor = self.topColor {
-            if let bottomColor = self.bottomColor {
-                let colorSpace = CGColorSpaceCreateDeviceRGB()
-                let colors: CFArray = [topColor.CGColor, bottomColor.CGColor]
-                let gradient = CGGradientCreateWithColors(colorSpace, colors, [0, 1])
-                let radius = sqrt(pow(CGRectGetWidth(self.bounds), 2)+pow(CGRectGetHeight(self.bounds), 2))
-                CGContextDrawRadialGradient(context, gradient, CGPointZero, 0, CGPointZero, radius, 0)
-            }
+    override func drawInContext(context: CGContext) {
+        guard let topColor = self.topColor else {
+            return
         }
+        guard let bottomColor = self.bottomColor else {
+            return
+        }
+
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let colors: CFArray = [topColor.CGColor, bottomColor.CGColor]
+        let gradient = CGGradientCreateWithColors(colorSpace, colors, [0, 1])
+        let radius = sqrt(pow(CGRectGetWidth(self.bounds), 2)+pow(CGRectGetHeight(self.bounds), 2))
+        CGContextDrawRadialGradient(context, gradient, CGPointZero, 0, CGPointZero, radius, [])
     }
     
 }
 
-class RadialGradientView: UIView {
+public class RadialGradientView: UIView {
 
     var topColor: UIColor? {
         didSet {
@@ -50,7 +53,7 @@ class RadialGradientView: UIView {
         }
     }
 
-    override class func layerClass() -> AnyClass {
+    override public class func layerClass() -> AnyClass {
         return RadialGradientLayer.self
     }
 

@@ -8,35 +8,35 @@
 
 import UIKit
 
-class GradientView: UIView {
+public class GradientView: UIView {
 
-    var topColor: UIColor? {
+    public var topColor: UIColor? {
         didSet {
             self.setColors()
         }
     }
-    var bottomColor: UIColor? {
+    public var bottomColor: UIColor? {
         didSet {
             self.setColors()
         }
     }
 
-    override class func layerClass() -> AnyClass {
+    override public class func layerClass() -> AnyClass {
         return CAGradientLayer.self
     }
 
     init() {
-        super.init(frame: CGRectZero) // TODO: is this the best work around?
+        super.init(frame: CGRectZero)
         self.setup()
     }
 
-    override init(frame:CGRect) {
-        super.init(frame:frame)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         self.setup()
     }
 
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder:aDecoder)
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         self.setup()
     }
 
@@ -54,5 +54,5 @@ class GradientView: UIView {
             }
         }
     }
-
+    
 }
