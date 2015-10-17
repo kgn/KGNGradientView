@@ -11,26 +11,24 @@ import XCTest
 
 class KGNGradientViewTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testGradientView() {
+        let view = GradientView()
+        view.topColor = UIColor.redColor()
+        view.bottomColor = UIColor.blueColor()
+        let layer = view.layer as! CAGradientLayer
+        XCTAssertEqual(layer.startPoint, CGPointMake(0.5, 0))
+        XCTAssertEqual(layer.endPoint, CGPointMake(0.5, 1.0))
+        XCTAssertEqual(view.topColor, UIColor(CGColor: (layer.colors?[0])! as! CGColor))
+        XCTAssertEqual(view.bottomColor, UIColor(CGColor: (layer.colors?[1])! as! CGColor))
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+
+    func testRadialGradientView() {
+        let view = RadialGradientView()
+        view.innerColor = UIColor.redColor()
+        view.outerColor = UIColor.blueColor()
+        let layer = view.layer as! RadialGradientLayer
+        XCTAssertEqual(view.innerColor, layer.innerColor)
+        XCTAssertEqual(view.outerColor, layer.outerColor)
     }
     
 }

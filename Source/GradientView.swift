@@ -8,13 +8,17 @@
 
 import UIKit
 
+/// A view with a linear gradient.
 public class GradientView: UIView {
 
+    /// The top color of the gradient.
     public var topColor: UIColor? {
         didSet {
             self.setColors()
         }
     }
+
+    /// The bottom color of the gradient.
     public var bottomColor: UIColor? {
         didSet {
             self.setColors()

@@ -8,29 +8,33 @@
 
 import UIKit
 
+/// A view with a radial gradient.
 class RadialGradientLayer: CALayer {
 
-    var topColor: UIColor? {
+    /// The inner color of the gradient.
+    var innerColor: UIColor? {
         didSet {
             self.setNeedsDisplay()
         }
     }
-    var bottomColor: UIColor? {
+
+    /// The outer color of the gradient.
+    var outerColor: UIColor? {
         didSet {
             self.setNeedsDisplay()
         }
     }
 
     override func drawInContext(context: CGContext) {
-        guard let topColor = self.topColor else {
+        guard let innerColor = self.innerColor else {
             return
         }
-        guard let bottomColor = self.bottomColor else {
+        guard let outerColor = self.outerColor else {
             return
         }
 
         let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let colors: CFArray = [topColor.CGColor, bottomColor.CGColor]
+        let colors: CFArray = [innerColor.CGColor, outerColor.CGColor]
         let gradient = CGGradientCreateWithColors(colorSpace, colors, [0, 1])
         let radius = sqrt(pow(CGRectGetWidth(self.bounds), 2)+pow(CGRectGetHeight(self.bounds), 2))
         CGContextDrawRadialGradient(context, gradient, CGPointZero, 0, CGPointZero, radius, [])
@@ -40,16 +44,16 @@ class RadialGradientLayer: CALayer {
 
 public class RadialGradientView: UIView {
 
-    var topColor: UIColor? {
+    var innerColor: UIColor? {
         didSet {
             let layer = self.layer as! RadialGradientLayer
-            layer.topColor = topColor
+            layer.innerColor = innerColor
         }
     }
-    var bottomColor: UIColor? {
+    var outerColor: UIColor? {
         didSet {
             let layer = self.layer as! RadialGradientLayer
-            layer.bottomColor = bottomColor
+            layer.outerColor = outerColor
         }
     }
 
