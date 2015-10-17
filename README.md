@@ -52,4 +52,4 @@ view.outerColor = UIColor.blueColor()
 - [X] Carthage
 - [X] CocoaPods
 - [X] Description
-- [X] Documentation
+- [ ] Documentation (Confirm it’s working)
