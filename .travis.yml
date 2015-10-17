@@ -1,12 +1,18 @@
 language: objective-c
 osx_image: xcode7
 
+env:
+  matrix:
+    # - SDK=iphonesimulator8.0
+    # - SDK=iphonesimulator8.1
+    # - SDK=iphonesimulator8.2
+    # - SDK=iphonesimulator8.3
+    # - SDK=iphonesimulator8.4
+    - SDK=iphonesimulator9.0
+
 before_install:
   - export PROJECT=KGNGradientView
-  - export SCHEME=$PROJECT
-  - export LANG=en_US.UTF-8
+  - export SCHEME=$PROJECT    
 
-  - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
-  - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-
-script: xctool clean test -project "$PROJECT.xcodeproj" -scheme $SCHEME -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+script: 
+  - xctool clean test -project "$PROJECT.xcodeproj" -scheme "$SCHEME" -sdk $SDK
