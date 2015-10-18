@@ -48,9 +48,9 @@ view.outerColor = UIColor.blueColor()
 ```
 
 ## TODO:
-- [ ] Travis ([#4961](https://github.com/travis-ci/travis-ci/issues/4961)) ([#4962](https://github.com/travis-ci/travis-ci/issues/4962))
-- [X] Badges
 - [ ] Tests (Tests are not running)
+- [ ] Travis
+- [X] Badges
 - [X] Carthage
 - [X] CocoaPods
 - [X] Description
