@@ -14,6 +14,8 @@
 [![CocoaPods Platforms](https://img.shields.io/cocoapods/p/KGNGradientView.svg)](https://cocoapods.org/pods/KGNGradientView)
 
 [![Twitter](https://img.shields.io/badge/Twitter-@iamkgn-55ACEE.svg)](http://twitter.com/iamkgn)
+[![Star](https://img.shields.io/github/followers/kgn.svg?style=social&label=Follow%20%40kgn)](https://github.com/kgn)
+[![Star](https://img.shields.io/github/stars/kgn/KGNGradientView.svg?style=social&label=Star)](https://github.com/kgn/KGNGradientView)
 
 ## Installing
 
@@ -52,4 +54,4 @@ view.outerColor = UIColor.blueColor()
 - [X] Carthage
 - [X] CocoaPods
 - [X] Description
-- [ ] Documentation (Confirm it’s working)
+- [X] Documentation

@@ -8,17 +8,14 @@
 
 import UIKit
 
-/// A view with a radial gradient.
 class RadialGradientLayer: CALayer {
 
-    /// The inner color of the gradient.
     var innerColor: UIColor? {
         didSet {
             self.setNeedsDisplay()
         }
     }
 
-    /// The outer color of the gradient.
     var outerColor: UIColor? {
         didSet {
             self.setNeedsDisplay()
@@ -42,14 +39,18 @@ class RadialGradientLayer: CALayer {
     
 }
 
+/// A view with a radial gradient.
 public class RadialGradientView: UIView {
 
+    /// The inner color of the gradient.
     var innerColor: UIColor? {
         didSet {
             let layer = self.layer as! RadialGradientLayer
             layer.innerColor = innerColor
         }
     }
+
+    /// The outer color of the gradient.
     var outerColor: UIColor? {
         didSet {
             let layer = self.layer as! RadialGradientLayer
