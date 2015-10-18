@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "83601E751BCCD765005B4AC3"
+               BuildableName = "KGNGradientViewTests.xctest"
+               BlueprintName = "KGNGradientViewTests"
+               ReferencedContainer = "container:KGNGradientView.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "83601E6B1BCCD765005B4AC3"
+            BuildableName = "KGNGradientView.framework"
+            BlueprintName = "KGNGradientView"
+            ReferencedContainer = "container:KGNGradientView.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

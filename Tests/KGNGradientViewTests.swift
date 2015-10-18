@@ -10,7 +10,7 @@ import XCTest
 @testable import KGNGradientView
 
 class KGNGradientViewTests: XCTestCase {
-    
+
     func testGradientView() {
         let view = GradientView()
         view.topColor = UIColor.redColor()

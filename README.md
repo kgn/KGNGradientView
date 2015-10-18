@@ -47,9 +47,9 @@ view.innerColor = UIColor.redColor()
 view.outerColor = UIColor.blueColor()
 ```
 
-## TODO:
-- [ ] Tests (Tests are not running)
-- [ ] Travis
+## Progress
+- [X] Tests
+- [X] Travis
 - [X] Badges
 - [X] Carthage
 - [X] CocoaPods
