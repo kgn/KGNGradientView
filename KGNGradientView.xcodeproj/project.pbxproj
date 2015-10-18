@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		83601E701BCCD765005B4AC3 /* KGNGradientView.h in Headers */ = {isa = PBXBuildFile; fileRef = 83601E6F1BCCD765005B4AC3 /* KGNGradientView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83601E771BCCD765005B4AC3 /* KGNGradientView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83601E6C1BCCD765005B4AC3 /* KGNGradientView.framework */; settings = {ASSET_TAGS = (); }; };
+		83601E771BCCD765005B4AC3 /* KGNGradientView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83601E6C1BCCD765005B4AC3 /* KGNGradientView.framework */; };
 		83601E7C1BCCD765005B4AC3 /* KGNGradientViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83601E7B1BCCD765005B4AC3 /* KGNGradientViewTests.swift */; };
-		836A9CEB1BCEC4E000991A1C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9CE91BCEC4E000991A1C /* GradientView.swift */; settings = {ASSET_TAGS = (); }; };
-		836A9CEC1BCEC4E000991A1C /* RadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9CEA1BCEC4E000991A1C /* RadialGradientView.swift */; settings = {ASSET_TAGS = (); }; };
+		836A9CEB1BCEC4E000991A1C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9CE91BCEC4E000991A1C /* GradientView.swift */; };
+		836A9CEC1BCEC4E000991A1C /* RadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9CEA1BCEC4E000991A1C /* RadialGradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
