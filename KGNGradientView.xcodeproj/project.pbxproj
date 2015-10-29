@@ -10,7 +10,7 @@
 		83601E701BCCD765005B4AC3 /* KGNGradientView.h in Headers */ = {isa = PBXBuildFile; fileRef = 83601E6F1BCCD765005B4AC3 /* KGNGradientView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83601E771BCCD765005B4AC3 /* KGNGradientView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83601E6C1BCCD765005B4AC3 /* KGNGradientView.framework */; };
 		83601E7C1BCCD765005B4AC3 /* KGNGradientViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83601E7B1BCCD765005B4AC3 /* KGNGradientViewTests.swift */; };
-		836A9CEB1BCEC4E000991A1C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9CE91BCEC4E000991A1C /* GradientView.swift */; };
+		836A9CEB1BCEC4E000991A1C /* VerticalGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9CE91BCEC4E000991A1C /* VerticalGradientView.swift */; };
 		836A9CEC1BCEC4E000991A1C /* RadialGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A9CEA1BCEC4E000991A1C /* RadialGradientView.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,7 @@
 		83601E761BCCD765005B4AC3 /* KGNGradientViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KGNGradientViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83601E7B1BCCD765005B4AC3 /* KGNGradientViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGNGradientViewTests.swift; sourceTree = "<group>"; };
 		83601E7D1BCCD765005B4AC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		836A9CE91BCEC4E000991A1C /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		836A9CE91BCEC4E000991A1C /* VerticalGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalGradientView.swift; sourceTree = "<group>"; };
 		836A9CEA1BCEC4E000991A1C /* RadialGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialGradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +75,7 @@
 		83601E6E1BCCD765005B4AC3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				836A9CE91BCEC4E000991A1C /* GradientView.swift */,
+				836A9CE91BCEC4E000991A1C /* VerticalGradientView.swift */,
 				836A9CEA1BCEC4E000991A1C /* RadialGradientView.swift */,
 				83601E6F1BCCD765005B4AC3 /* KGNGradientView.h */,
 				83601E711BCCD765005B4AC3 /* Info.plist */,
@@ -200,7 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				836A9CEB1BCEC4E000991A1C /* GradientView.swift in Sources */,
+				836A9CEB1BCEC4E000991A1C /* VerticalGradientView.swift in Sources */,
 				836A9CEC1BCEC4E000991A1C /* RadialGradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

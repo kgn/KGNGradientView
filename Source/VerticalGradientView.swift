@@ -1,5 +1,5 @@
 //
-//  GradientView.swift
+//  VerticalGradientView.swift
 //  KGNGradientView
 //
 //  Created by David Keegan on 1/10/15.
@@ -8,18 +8,16 @@
 
 import UIKit
 
+public struct VerticalGradient {
+    var topColor: UIColor?
+    var bottomColor: UIColor?
+}
+
 /// A view with a linear gradient.
-public class GradientView: UIView {
+public class VerticalGradientView: UIView {
 
-    /// The top color of the gradient.
-    public var topColor: UIColor? {
-        didSet {
-            self.setColors()
-        }
-    }
-
-    /// The bottom color of the gradient.
-    public var bottomColor: UIColor? {
+    /// The vertical gradient to display.
+    public var gradient: VerticalGradient? {
         didSet {
             self.setColors()
         }
@@ -51,12 +49,16 @@ public class GradientView: UIView {
     }
 
     private func setColors() {
+        var colors: [CGColor] = []
         let layer = self.layer as! CAGradientLayer
-        if let topColor = self.topColor {
-            if let bottomColor = self.bottomColor {
-                layer.colors = [topColor.CGColor, bottomColor.CGColor]
-            }
+        if let topColor = self.gradient?.topColor {
+            colors.append(topColor.CGColor)
         }
+
+        if let bottomColor = self.gradient?.bottomColor {
+            colors.append(bottomColor.CGColor)
+        }
+        layer.colors = colors
     }
     
 }
