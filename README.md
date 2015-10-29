@@ -31,20 +31,21 @@ pod 'KGNGradientView'
 
 ## Examples
 
-### GradientView
+### Gradient
+`Gradient` is a struct that encapsulates the start and end colors of the gradient.
+
+### VerticalGradientView
 A `UIView` subclass that creates a view with a linear gradient.
 ``` Swift
-let view = GradientView()
-view.topColor = UIColor.redColor()
-view.bottomColor = UIColor.blueColor()
+let view = VerticalGradientView()
+view.gradient = Gradient(startColor: UIColor.redColor(), endColor: UIColor.blueColor())
 ```
 
 ### RadialGradientView
 A `UIView` subclass that creates a view with a radial gradient.
 ``` Swift
 let view = RadialGradientView()
-view.innerColor = UIColor.redColor()
-view.outerColor = UIColor.blueColor()
+view.gradient = Gradient(startColor: UIColor.redColor(), endColor: UIColor.blueColor())
 ```
 
 ## Progress
