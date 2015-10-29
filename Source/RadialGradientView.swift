@@ -43,7 +43,7 @@ class RadialGradientLayer: CALayer {
 public class RadialGradientView: UIView {
 
     /// The radial gradient to display.
-    var gradient: Gradient? {
+    public var gradient: Gradient? {
         didSet {
             let layer = self.layer as! RadialGradientLayer
             layer.innerColor = self.gradient?.startColor
