@@ -8,16 +8,11 @@
 
 import UIKit
 
-public struct VerticalGradient {
-    var topColor: UIColor?
-    var bottomColor: UIColor?
-}
-
 /// A view with a linear gradient.
 public class VerticalGradientView: UIView {
 
     /// The vertical gradient to display.
-    public var gradient: VerticalGradient? {
+    public var gradient: Gradient? {
         didSet {
             self.setColors()
         }
@@ -51,11 +46,11 @@ public class VerticalGradientView: UIView {
     private func setColors() {
         var colors: [CGColor] = []
         let layer = self.layer as! CAGradientLayer
-        if let topColor = self.gradient?.topColor {
+        if let topColor = self.gradient?.startColor {
             colors.append(topColor.CGColor)
         }
 
-        if let bottomColor = self.gradient?.bottomColor {
+        if let bottomColor = self.gradient?.endColor {
             colors.append(bottomColor.CGColor)
         }
         layer.colors = colors

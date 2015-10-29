@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		830074551BE1D0AD00C98485 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830074541BE1D0AD00C98485 /* Gradient.swift */; };
 		83601E701BCCD765005B4AC3 /* KGNGradientView.h in Headers */ = {isa = PBXBuildFile; fileRef = 83601E6F1BCCD765005B4AC3 /* KGNGradientView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83601E771BCCD765005B4AC3 /* KGNGradientView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83601E6C1BCCD765005B4AC3 /* KGNGradientView.framework */; };
 		83601E7C1BCCD765005B4AC3 /* KGNGradientViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83601E7B1BCCD765005B4AC3 /* KGNGradientViewTests.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		830074541BE1D0AD00C98485 /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		83601E6C1BCCD765005B4AC3 /* KGNGradientView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KGNGradientView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83601E6F1BCCD765005B4AC3 /* KGNGradientView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGNGradientView.h; sourceTree = "<group>"; };
 		83601E711BCCD765005B4AC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		83601E6E1BCCD765005B4AC3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				830074541BE1D0AD00C98485 /* Gradient.swift */,
 				836A9CE91BCEC4E000991A1C /* VerticalGradientView.swift */,
 				836A9CEA1BCEC4E000991A1C /* RadialGradientView.swift */,
 				83601E6F1BCCD765005B4AC3 /* KGNGradientView.h */,
@@ -202,6 +205,7 @@
 			files = (
 				836A9CEB1BCEC4E000991A1C /* VerticalGradientView.swift in Sources */,
 				836A9CEC1BCEC4E000991A1C /* RadialGradientView.swift in Sources */,
+				830074551BE1D0AD00C98485 /* Gradient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

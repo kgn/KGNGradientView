@@ -8,11 +8,6 @@
 
 import UIKit
 
-public struct RadialGradient {
-    var innerColor: UIColor?
-    var outerColor: UIColor?
-}
-
 class RadialGradientLayer: CALayer {
 
     var innerColor: UIColor? {
@@ -48,11 +43,11 @@ class RadialGradientLayer: CALayer {
 public class RadialGradientView: UIView {
 
     /// The radial gradient to display.
-    var gradient: RadialGradient? {
+    var gradient: Gradient? {
         didSet {
             let layer = self.layer as! RadialGradientLayer
-            layer.innerColor = self.gradient?.innerColor
-            layer.outerColor = self.gradient?.outerColor
+            layer.innerColor = self.gradient?.startColor
+            layer.outerColor = self.gradient?.endColor
         }
     }
 
