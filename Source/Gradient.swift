@@ -9,6 +9,6 @@
 import UIKit
 
 public struct Gradient {
-    public var startColor: UIColor?
-    public var endColor: UIColor?
+    public var startColor: UIColor? = nil
+    public var endColor: UIColor? = nil
 }
