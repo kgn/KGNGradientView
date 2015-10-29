@@ -8,7 +8,23 @@
 
 import UIKit
 
+/// A gradient struct
 public struct Gradient {
-    public var startColor: UIColor? = nil
-    public var endColor: UIColor? = nil
+
+    /// The start color of the gradient
+    public var startColor: UIColor?
+
+    // The end color of the gradient
+    public var endColor: UIColor?
+
+    /// Initialize a gradient struct without a start or end color
+    public init () {
+        // Nothing to initialize
+    }
+
+    /// Initialize a gradient struct with a start and end color
+    public init (startColor: UIColor?, endColor: UIColor?) {
+        self.startColor = startColor
+        self.endColor = endColor
+    }
 }
