@@ -22,11 +22,6 @@ public class VerticalGradientView: UIView {
         return CAGradientLayer.self
     }
 
-    init() {
-        super.init(frame: CGRectZero)
-        self.setup()
-    }
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setup()
