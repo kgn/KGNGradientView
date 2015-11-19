@@ -8,7 +8,7 @@
 
 import UIKit
 
-private class RadialGradientLayer: CALayer {
+internal class RadialGradientLayer: CALayer {
 
     var innerColor: UIColor? {
         didSet {

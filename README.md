@@ -9,6 +9,7 @@
 [![Build Status](http://img.shields.io/badge/License-MIT-lightgrey.svg)](/LICENSE)
 
 [![Build Status](https://travis-ci.org/kgn/KGNGradientView.svg)](https://travis-ci.org/kgn/KGNGradientView)
+[![Test Coverage](http://img.shields.io/badge/Tests-58%25-red.svg)]()
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-Compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/KGNGradientView.svg)](https://cocoapods.org/pods/KGNGradientView)
 [![CocoaPods Platforms](https://img.shields.io/cocoapods/p/KGNGradientView.svg)](https://cocoapods.org/pods/KGNGradientView)
