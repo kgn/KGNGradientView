@@ -22,7 +22,7 @@ public class VerticalGradientView: UIView {
         return CAGradientLayer.self
     }
 
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         self.setup()
     }
