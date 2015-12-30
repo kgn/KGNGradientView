@@ -27,4 +27,9 @@ public struct Gradient {
         self.startColor = startColor
         self.endColor = endColor
     }
+
+    /// Returns a gradient with the start and end colors reversed.
+    public func reverse() -> Gradient {
+        return Gradient(startColor: self.endColor, endColor: self.startColor)
+    }
 }
