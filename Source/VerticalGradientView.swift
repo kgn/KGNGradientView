@@ -44,7 +44,6 @@ public class VerticalGradientView: UIView {
         if let topColor = self.gradient?.startColor {
             colors.append(topColor.CGColor)
         }
-
         if let bottomColor = self.gradient?.endColor {
             colors.append(bottomColor.CGColor)
         }
