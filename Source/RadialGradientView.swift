@@ -58,6 +58,10 @@ public class RadialGradientView: UIView {
             let layer = self.layer as! RadialGradientLayer
             layer.innerColor = self.gradient?.startColor
             layer.outerColor = self.gradient?.endColor
+
+            let startAlpha = CGColorGetAlpha(self.gradient?.startColor?.CGColor)
+            let endAlpha = CGColorGetAlpha(self.gradient?.endColor?.CGColor)
+            self.opaque = startAlpha == 1 && endAlpha == 1
         }
     }
 

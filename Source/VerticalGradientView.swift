@@ -39,13 +39,20 @@ public class VerticalGradientView: UIView {
     }
 
     private func setColors() {
+        self.opaque = true
         var colors: [CGColor] = []
         let layer = self.layer as! CAGradientLayer
         if let topColor = self.gradient?.startColor {
             colors.append(topColor.CGColor)
+            if CGColorGetAlpha(topColor.CGColor) < 1 {
+                self.opaque = false
+            }
         }
         if let bottomColor = self.gradient?.endColor {
             colors.append(bottomColor.CGColor)
+            if CGColorGetAlpha(bottomColor.CGColor) < 1 {
+                self.opaque = false
+            }
         }
         layer.colors = colors
     }
