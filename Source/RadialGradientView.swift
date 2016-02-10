@@ -36,14 +36,14 @@ internal class RadialGradientLayer: CALayer {
             return
         }
 
-        var point = CGPointZero
-        point.x = CGRectGetWidth(self.bounds)*(self.point?.x ?? 0.5)
-        point.y = CGRectGetHeight(self.bounds)*(self.point?.y ?? 0.5)
+        var point = CGPoint.zero
+        point.x = self.bounds.width*(self.point?.x ?? 0.5)
+        point.y = self.bounds.height*(self.point?.y ?? 0.5)
 
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let colors: CFArray = [innerColor.CGColor, outerColor.CGColor]
         let gradient = CGGradientCreateWithColors(colorSpace, colors, [0, 1])
-        let radius = min(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds))
+        let radius = min(self.bounds.width, self.bounds.height)
         CGContextDrawRadialGradient(context, gradient, point, 0, point, radius, .DrawsAfterEndLocation)
     }
     

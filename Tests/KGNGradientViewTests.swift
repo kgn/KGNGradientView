@@ -18,8 +18,8 @@ class KGNGradientViewTests: XCTestCase {
         XCTAssertEqual(view.opaque, true)
         view.gradient = Gradient(startColor: startColor, endColor: endColor)
         let layer = view.layer as! CAGradientLayer
-        XCTAssertEqual(layer.startPoint, CGPointMake(0.5, 0))
-        XCTAssertEqual(layer.endPoint, CGPointMake(0.5, 1.0))
+        XCTAssertEqual(layer.startPoint, CGPoint(x: 0.5, y: 0))
+        XCTAssertEqual(layer.endPoint, CGPoint(x: 0.5, y: 1.0))
         XCTAssertEqual(view.gradient?.startColor, UIColor(CGColor: (layer.colors?[0])! as! CGColor))
         XCTAssertEqual(view.gradient?.endColor, UIColor(CGColor: (layer.colors?[1])! as! CGColor))
         XCTAssertEqual(view.opaque, true)
@@ -32,8 +32,8 @@ class KGNGradientViewTests: XCTestCase {
         XCTAssertEqual(view.opaque, true)
         view.gradient = Gradient(startColor: startColor, endColor: endColor)
         let layer = view.layer as! CAGradientLayer
-        XCTAssertEqual(layer.startPoint, CGPointMake(0.5, 0))
-        XCTAssertEqual(layer.endPoint, CGPointMake(0.5, 1.0))
+        XCTAssertEqual(layer.startPoint, CGPoint(x: 0.5, y: 0))
+        XCTAssertEqual(layer.endPoint, CGPoint(x: 0.5, y: 1.0))
         XCTAssertEqual(view.gradient?.startColor, UIColor(CGColor: (layer.colors?[0])! as! CGColor))
         XCTAssertEqual(view.gradient?.endColor, UIColor(CGColor: (layer.colors?[1])! as! CGColor))
         XCTAssertEqual(view.opaque, false)
@@ -46,8 +46,8 @@ class KGNGradientViewTests: XCTestCase {
         XCTAssertEqual(view.opaque, true)
         view.gradient = Gradient(startColor: startColor, endColor: endColor)
         let layer = view.layer as! CAGradientLayer
-        XCTAssertEqual(layer.startPoint, CGPointMake(0.5, 0))
-        XCTAssertEqual(layer.endPoint, CGPointMake(0.5, 1.0))
+        XCTAssertEqual(layer.startPoint, CGPoint(x: 0.5, y: 0))
+        XCTAssertEqual(layer.endPoint, CGPoint(x: 0.5, y: 1.0))
         XCTAssertEqual(view.gradient?.startColor, UIColor(CGColor: (layer.colors?[0])! as! CGColor))
         XCTAssertEqual(view.gradient?.endColor, UIColor(CGColor: (layer.colors?[1])! as! CGColor))
         XCTAssertEqual(view.opaque, false)

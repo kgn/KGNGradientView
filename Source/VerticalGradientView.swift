@@ -34,8 +34,8 @@ public class VerticalGradientView: UIView {
 
     private func setup() {
         let layer = self.layer as! CAGradientLayer
-        layer.startPoint = CGPointMake(0.5, 0)
-        layer.endPoint = CGPointMake(0.5, 1)
+        layer.startPoint = CGPoint(x: 0.5, y: 0)
+        layer.endPoint = CGPoint(x: 0.5, y: 1)
     }
 
     private func setColors() {
