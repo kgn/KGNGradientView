@@ -2,10 +2,8 @@
 
 `KGNGradientView` is a collection `UIView` subclasses for linear and radial gradients.
 
-[![iOS 8.0+](http://img.shields.io/badge/iOS-8.0%2B-blue.svg)]()
-[![Swift 2.0+](http://img.shields.io/badge/Swift-2.0-blue.svg)]()
 [![Release](https://img.shields.io/github/release/kgn/KGNGradientView.svg)](/releases)
-[![Build Status](http://img.shields.io/badge/License-MIT-lightgrey.svg)](/LICENSE)
+[![License](http://img.shields.io/badge/License-MIT-lightgrey.svg)](/LICENSE)
 
 [![Build Status](https://travis-ci.org/kgn/KGNGradientView.svg)](https://travis-ci.org/kgn/KGNGradientView)
 [![Test Coverage](http://img.shields.io/badge/Tests-58%25-red.svg)]()
@@ -57,5 +55,5 @@ view.gradient = Gradient(startColor: UIColor.redColor(), endColor: UIColor.blueC
 - [X] Description
 - [X] Documentation
 - [ ] AppleTV
-- [ ] Prebuilt Frameworks
+- [X] Prebuilt Frameworks
 - [ ] Travis Test Matrix
