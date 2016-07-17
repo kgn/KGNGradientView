@@ -28,7 +28,7 @@ internal class RadialGradientLayer: CALayer {
         }
     }
 
-    override func drawInContext(context: CGContext) {
+    override func draw(in context: CGContext) {
         guard let innerColor = self.innerColor else {
             return
         }
@@ -41,10 +41,10 @@ internal class RadialGradientLayer: CALayer {
         point.y = self.bounds.height*(self.point?.y ?? 0.5)
 
         let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let colors: CFArray = [innerColor.CGColor, outerColor.CGColor]
-        let gradient = CGGradientCreateWithColors(colorSpace, colors, [0, 1])
+        let colors: CFArray = [innerColor.cgColor, outerColor.cgColor]
+        let gradient = CGGradient(colorsSpace: colorSpace, colors: colors, locations: [0, 1])
         let radius = min(self.bounds.width, self.bounds.height)
-        CGContextDrawRadialGradient(context, gradient, point, 0, point, radius, .DrawsAfterEndLocation)
+        context.drawRadialGradient(gradient!, startCenter: point, startRadius: 0, endCenter: point, endRadius: radius, options: .drawsAfterEndLocation)
     }
     
 }
@@ -59,9 +59,9 @@ public class RadialGradientView: UIView {
             layer.innerColor = self.gradient?.startColor
             layer.outerColor = self.gradient?.endColor
 
-            let startAlpha = CGColorGetAlpha(self.gradient?.startColor?.CGColor)
-            let endAlpha = CGColorGetAlpha(self.gradient?.endColor?.CGColor)
-            self.opaque = startAlpha == 1 && endAlpha == 1
+            let startAlpha = self.gradient?.startColor?.cgColor.alpha
+            let endAlpha = self.gradient?.endColor?.cgColor.alpha
+            self.isOpaque = startAlpha == 1 && endAlpha == 1
         }
     }
 
