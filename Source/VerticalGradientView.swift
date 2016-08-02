@@ -18,7 +18,7 @@ public class VerticalGradientView: UIView {
         }
     }
 
-    override public class func layerClass() -> AnyClass {
+    override public static var layerClass: AnyClass {
         return CAGradientLayer.self
     }
 

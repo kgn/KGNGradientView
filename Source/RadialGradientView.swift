@@ -74,7 +74,7 @@ public class RadialGradientView: UIView {
         }
     }
 
-    override public class func layerClass() -> AnyClass {
+    override public static var layerClass: AnyClass {
         return RadialGradientLayer.self
     }
 

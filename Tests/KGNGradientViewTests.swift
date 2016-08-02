@@ -12,8 +12,8 @@ import XCTest
 class KGNGradientViewTests: XCTestCase {
 
     func testVerticalGradientView() {
-        let startColor = UIColor.red()
-        let endColor = UIColor.blue()
+        let startColor = UIColor.red
+        let endColor = UIColor.blue
         let view = VerticalGradientView()
         XCTAssertEqual(view.isOpaque, true)
         view.gradient = Gradient(startColor: startColor, endColor: endColor)
@@ -26,8 +26,8 @@ class KGNGradientViewTests: XCTestCase {
     }
 
     func testVerticalGradientViewStartAlpha() {
-        let startColor = UIColor.red().withAlphaComponent(0.5)
-        let endColor = UIColor.blue()
+        let startColor = UIColor.red.withAlphaComponent(0.5)
+        let endColor = UIColor.blue
         let view = VerticalGradientView()
         XCTAssertEqual(view.isOpaque, true)
         view.gradient = Gradient(startColor: startColor, endColor: endColor)
@@ -40,8 +40,8 @@ class KGNGradientViewTests: XCTestCase {
     }
 
     func testVerticalGradientViewEndAlpha() {
-        let startColor = UIColor.red()
-        let endColor = UIColor.blue().withAlphaComponent(0.5)
+        let startColor = UIColor.red
+        let endColor = UIColor.blue.withAlphaComponent(0.5)
         let view = VerticalGradientView()
         XCTAssertEqual(view.isOpaque, true)
         view.gradient = Gradient(startColor: startColor, endColor: endColor)
@@ -54,8 +54,8 @@ class KGNGradientViewTests: XCTestCase {
     }
 
     func testRadialGradientView() {
-        let startColor = UIColor.red()
-        let endColor = UIColor.blue()
+        let startColor = UIColor.red
+        let endColor = UIColor.blue
         let view = RadialGradientView()
         XCTAssertEqual(view.isOpaque, true)
         view.gradient = Gradient(startColor: startColor, endColor: endColor)
@@ -66,8 +66,8 @@ class KGNGradientViewTests: XCTestCase {
     }
 
     func testRadialGradientViewStartAlpha() {
-        let startColor = UIColor.red().withAlphaComponent(0.5)
-        let endColor = UIColor.blue()
+        let startColor = UIColor.red.withAlphaComponent(0.5)
+        let endColor = UIColor.blue
         let view = RadialGradientView()
         XCTAssertEqual(view.isOpaque, true)
         view.gradient = Gradient(startColor: startColor, endColor: endColor)
@@ -78,8 +78,8 @@ class KGNGradientViewTests: XCTestCase {
     }
 
     func testRadialGradientViewEndAlpha() {
-        let startColor = UIColor.red()
-        let endColor = UIColor.blue().withAlphaComponent(0.5)
+        let startColor = UIColor.red
+        let endColor = UIColor.blue.withAlphaComponent(0.5)
         let view = RadialGradientView()
         XCTAssertEqual(view.isOpaque, true)
         view.gradient = Gradient(startColor: startColor, endColor: endColor)
