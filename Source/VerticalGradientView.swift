@@ -9,36 +9,36 @@
 import UIKit
 
 /// A view with a linear gradient.
-public class VerticalGradientView: UIView {
+open class VerticalGradientView: UIView {
 
     /// The vertical gradient to display.
-    public var gradient: Gradient? {
+    open var gradient: Gradient? {
         didSet {
             self.setColors()
         }
     }
 
-    override public static var layerClass: AnyClass {
+    open override static var layerClass: AnyClass {
         return CAGradientLayer.self
     }
 
-    override public init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.setup()
     }
 
-    required public init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.setup()
     }
 
-    private func setup() {
+    fileprivate func setup() {
         let layer = self.layer as! CAGradientLayer
         layer.startPoint = CGPoint(x: 0.5, y: 0)
         layer.endPoint = CGPoint(x: 0.5, y: 1)
     }
 
-    private func setColors() {
+    fileprivate func setColors() {
         self.isOpaque = true
         var colors: [CGColor] = []
         let layer = self.layer as! CAGradientLayer

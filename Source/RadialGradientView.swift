@@ -41,19 +41,19 @@ internal class RadialGradientLayer: CALayer {
         point.y = self.bounds.height*(self.point?.y ?? 0.5)
 
         let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let colors: CFArray = [innerColor.cgColor, outerColor.cgColor]
+        let radius = min(self.bounds.width, self.bounds.height)        
+        let colors = [innerColor.cgColor, outerColor.cgColor] as CFArray
         let gradient = CGGradient(colorsSpace: colorSpace, colors: colors, locations: [0, 1])
-        let radius = min(self.bounds.width, self.bounds.height)
         context.drawRadialGradient(gradient!, startCenter: point, startRadius: 0, endCenter: point, endRadius: radius, options: .drawsAfterEndLocation)
     }
     
 }
 
 /// A view with a radial gradient.
-public class RadialGradientView: UIView {
+open class RadialGradientView: UIView {
 
     /// The radial gradient to display.
-    public var gradient: Gradient? {
+    open var gradient: Gradient? {
         didSet {
             let layer = self.layer as! RadialGradientLayer
             layer.innerColor = self.gradient?.startColor
@@ -67,14 +67,14 @@ public class RadialGradientView: UIView {
 
     /// The origin point of the radial gradient.
     /// Range from 0 to 1, defaults to 0.5(center).
-    public var point: CGPoint? {
+    open var point: CGPoint? {
         didSet {
             let layer = self.layer as! RadialGradientLayer
             layer.point = point
         }
     }
 
-    override public static var layerClass: AnyClass {
+    open override static var layerClass: AnyClass {
         return RadialGradientLayer.self
     }
 
