@@ -26,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6487CECC1D83267B00B2589C /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		830074541BE1D0AD00C98485 /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		83601E6C1BCCD765005B4AC3 /* KGNGradientView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KGNGradientView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83601E6F1BCCD765005B4AC3 /* KGNGradientView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KGNGradientView.h; sourceTree = "<group>"; };
@@ -59,6 +60,7 @@
 		83601E621BCCD765005B4AC3 = {
 			isa = PBXGroup;
 			children = (
+				6487CECC1D83267B00B2589C /* .travis.yml */,
 				83601E6E1BCCD765005B4AC3 /* Source */,
 				83601E7A1BCCD765005B4AC3 /* Tests */,
 				83601E6D1BCCD765005B4AC3 /* Products */,
