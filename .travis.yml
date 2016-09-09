@@ -5,7 +5,7 @@ env:
 global:
   - PROJECT=KGNGradientView
 matrix:
-  - DESTINATION="OS=10.0,name=iPhone 7 Plus" SCHEME=$PROJECT SDK=iphonesimulator TEST=test
+  - DESTINATION="OS=10.0,name=iPhone 6s Plus" SCHEME=$PROJECT SDK=iphonesimulator TEST=test
 
 script:
   - xcodebuild $TEST -project "$PROJECT.xcodeproj" -scheme "$SCHEME" -sdk $SDK -destination "$DESTINATION"
