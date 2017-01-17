@@ -7,30 +7,39 @@
 //
 
 import UIKit
+import KGNGradientView
 
 internal class RadialGradientLayer: CALayer {
 
     var innerColor: UIColor? {
         didSet {
-            self.setNeedsDisplay()
+            if self.innerColor != oldValue {
+                self.setNeedsDisplay()
+            }
         }
     }
 
     var outerColor: UIColor? {
         didSet {
-            self.setNeedsDisplay()
+            if self.outerColor != oldValue {
+                self.setNeedsDisplay()
+            }
         }
     }
 
     var startPoint: CGPoint? {
         didSet {
-            self.setNeedsDisplay()
+            if self.startPoint != oldValue {
+                self.setNeedsDisplay()
+            }
         }
     }
     
     var endPoint: CGPoint? {
         didSet {
-            self.setNeedsDisplay()
+            if self.endPoint != oldValue {
+                self.setNeedsDisplay()
+            }
         }
     }
 
@@ -61,14 +70,19 @@ internal class RadialGradientLayer: CALayer {
         )
         
         let radius = max(
-            abs(viewPoint1.x-viewPoint2.x),
-            abs(viewPoint1.y-viewPoint2.y)
+            sqrt(pow(viewPoint1.x, 2)+pow(viewPoint2.x, 2)),
+            sqrt(pow(viewPoint1.y, 2)+pow(viewPoint2.y, 2))
         )
         
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let colors = [innerColor.cgColor, outerColor.cgColor] as CFArray
         let gradient = CGGradient(colorsSpace: colorSpace, colors: colors, locations: [0, 1])
-        context.drawRadialGradient(gradient!, startCenter: viewPoint1, startRadius: 0, endCenter: viewPoint1, endRadius: radius, options: .drawsAfterEndLocation)
+        context.drawRadialGradient(
+            gradient!,
+            startCenter: viewPoint1, startRadius: 0,
+            endCenter: viewPoint1, endRadius: radius,
+            options: .drawsAfterEndLocation
+        )
     }
     
 }
@@ -93,8 +107,7 @@ open class RadialGradientView: UIView {
     /// Range from 0 to 1, defaults to 0.5(center).
     open var startPoint: CGPoint? {
         didSet {
-            let layer = self.layer as! RadialGradientLayer
-            layer.startPoint = startPoint
+            (self.layer as! RadialGradientLayer).startPoint = startPoint
         }
     }
     
@@ -102,8 +115,7 @@ open class RadialGradientView: UIView {
     /// Range from 0 to 1, defaults to 0.5(center).
     open var endPoint: CGPoint? {
         didSet {
-            let layer = self.layer as! RadialGradientLayer
-            layer.endPoint = endPoint
+            (self.layer as! RadialGradientLayer).endPoint = endPoint
         }
     }
 
