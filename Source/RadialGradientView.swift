@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import KGNGradientView
 
 internal class RadialGradientLayer: CALayer {
 
