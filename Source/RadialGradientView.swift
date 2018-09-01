@@ -117,8 +117,8 @@ open class RadialGradientView: UIView {
             (self.layer as! RadialGradientLayer).endPoint = endPoint
         }
     }
-
-    open override static var layerClass: AnyClass {
+    
+    override open class var layerClass: AnyClass {
         return RadialGradientLayer.self
     }
 
