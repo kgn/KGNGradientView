@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'KGNGradientView'
-  spec.version = '0.5'
+  spec.version = '0.8.0'
   spec.authors = {'David Keegan' => 'git@davidkeegan.com'}
   spec.homepage = 'https://github.com/kgn/KGNGradientView'
   spec.summary = 'KGNGradientView is a collection UIView subclasses for linear and radial gradients.'
